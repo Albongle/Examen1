@@ -165,7 +165,7 @@ void bajaPrestamoYcliente(ePrestamoCliente* pArrayPrestamoClientes,int tamArrayP
 	{
 		for(i=0;i<tamArrayPrestamoClientes;i++)
 			{
-				if (pArrayPrestamoClientes[i].isEmpty==0 && pArrayPrestamoClientes[i].idCliente==idClienteBaja)
+				if (pArrayPrestamoClientes[i].idCliente==idClienteBaja)
 				{
 					pArrayPrestamoClientes[i].isEmpty=1;
 				}
