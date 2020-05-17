@@ -203,7 +203,7 @@ void bajaPrestamoPorIdCliente(ePrestamos* pArrayPrestamos,int tamArrayPrestamos,
 	{
 		for(i=0;i<tamArrayPrestamos;i++)
 			{
-				if (pArrayPrestamos[i].isEmpty==0 && pArrayPrestamos[i].idCliente==idClienteBaja)
+				if ((pArrayPrestamos[i].isEmpty==0 || pArrayPrestamos[i].isEmpty==-1) &&pArrayPrestamos[i].idCliente==idClienteBaja)
 				{
 					pArrayPrestamos[i].isEmpty=1;
 				}

@@ -20,6 +20,7 @@ void clienteMasPrestamosActivos(eClientes* pArrayClientes, int tamArrayClientes,
 	int maxPrestamos;
 	int cantidad;
 	int posCliente;
+	int flag=0;
 
 	if(pArrayClientes!=NULL && tamArrayClientes>0 && pArrayPrestamoClientes!=NULL && tamArrayPrestamoClientes>0)
 	{
@@ -28,14 +29,17 @@ void clienteMasPrestamosActivos(eClientes* pArrayClientes, int tamArrayClientes,
 			if(pArrayClientes[i].isEmpty==0)
 			{
 				cantidad=cantidadPrestamosActivosCliente(pArrayPrestamoClientes,tamArrayPrestamoClientes,pArrayClientes[i].idCliente);
-				if(i==0 || cantidad>maxPrestamos)
+
+				if(flag==0 || cantidad>maxPrestamos)
 				{
 					maxPrestamos=cantidad;
 					posCliente=i;
+					flag=1;
 				}
 			}
 		}
 	}
+
 	if(maxPrestamos>0)
 	{
 	printf("----El cliente con mas prestamos activos es----\n\n\n");
@@ -57,6 +61,7 @@ void clienteMasPrestamosSaldados(eClientes* pArrayClientes, int tamArrayClientes
 	int maxPrestamos;
 	int cantidad;
 	int posCliente;
+	int flag=0;
 
 	if(pArrayClientes!=NULL && tamArrayClientes>0 && pArrayPrestamoClientes!=NULL && tamArrayPrestamoClientes>0)
 	{
@@ -65,10 +70,12 @@ void clienteMasPrestamosSaldados(eClientes* pArrayClientes, int tamArrayClientes
 			if(pArrayClientes[i].isEmpty==0)
 			{
 				cantidad=cantidadPrestamosSaldadosCliente(pArrayPrestamoClientes,tamArrayPrestamoClientes,pArrayClientes[i].idCliente);
-				if(i==0 || cantidad>maxPrestamos)
+				fflush(stdin);
+				if(flag==0 || cantidad>maxPrestamos)
 				{
 					maxPrestamos=cantidad;
 					posCliente=i;
+					flag=1;
 				}
 			}
 		}
