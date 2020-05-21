@@ -418,3 +418,28 @@ if(pArrayPrestamos!=NULL && tamArrayPrestamos>0 )
 }
 return cont;
 }
+
+
+int buscarPosPrestamoSaldado_Cuota(ePrestamos* pArrayPrestamos,int valorBuscado, int tamArrayPrestamos)
+{
+int indice=-1;
+int i;
+if(pArrayPrestamos!=NULL && tamArrayPrestamos>0 && valorBuscado>=0)
+{
+
+	for(i=0;i<tamArrayPrestamos;i++)
+	{
+		if (pArrayPrestamos[i].isEmpty==-1 && pArrayPrestamos[i].cuotas==valorBuscado)
+		{
+			indice=i;
+			break;
+		}
+
+	}
+
+}
+return indice;
+}
+
+
+

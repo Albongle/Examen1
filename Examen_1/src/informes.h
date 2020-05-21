@@ -34,4 +34,31 @@ void clienteMasPrestamosSaldados(eClientes* pArrayClientes, int tamArrayClientes
  */
 void prestamosImporteMayor(ePrestamos* pArrayPrestamos,int tamArrayPrestamos);
 
+/**
+ * brief funcion usada para mostrar listar los clientes con mas prestamos
+ * param pArrayClientes es el array de clientes que se va a recorrer
+ * param tamArrayClientes es el tamaño del array de clientes
+ * param pArrayPrestamos es el array sobre el cual se va a realizar la comprobacion
+ * param tamArrayPrestamos es el tamaño del array
+ */
+void clienteMasPrestamos(eClientes* pArrayClientes, int tamArrayClientes,ePrestamoCliente* pArrayPrestamoClientes,int tamArrayPrestamoClientes);
+/**
+ * brief funcion usada para mostrar listar los de acuerdo a un importe de cupta ingresado
+ * param pArrayClientes es el array de clientes que se va a recorrer
+ * param tamArrayClientes es el tamaño del array de clientes
+ * param pArrayPrestamos es el array sobre el cual se va a realizar la comprobacion
+ * param tamArrayPrestamos es el tamaño del array
+ */
+
+void prestamoPorcuota(ePrestamos* pArrayPrestamos,int tamArrayPrestamos, eClientes* pArrayClientes, int tamArrayClientes);
+/**
+ * brief funcion usada para mostrar la cantidad de prestamos de acuerdo a un ingreso
+ * param pArrayClientes es el array de clientes que se va a recorrer
+ * param tamArrayClientes es el tamaño del array de clientes
+ * param pArrayPrestamos es el array sobre el cual se va a realizar la comprobacion
+ * param tamArrayPrestamos es el tamaño del array
+ */
+
+void prestamosPorCuota(ePrestamos* pArrayPrestamos,int tamArrayPrestamos);
+
 #endif /* INFORMES_H_ */

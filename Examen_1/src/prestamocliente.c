@@ -157,6 +157,24 @@ int cantidadPrestamosSaldadosCliente(ePrestamoCliente* pArrayPrestamoClientes,in
 
 	return cantidad;
 }
+int cantidadPrestamosCliente(ePrestamoCliente* pArrayPrestamoClientes,int tamArrayPrestamoClientes, int idCliente)
+{
+	int cantidad=0;
+	int i;
+	if(pArrayPrestamoClientes!=NULL && tamArrayPrestamoClientes>0 && idCliente>=0)
+	{
+		for(i=0; i<tamArrayPrestamoClientes; i++)
+		{
+			if((pArrayPrestamoClientes[i].isEmpty==-1 || pArrayPrestamoClientes[i].isEmpty==0) && pArrayPrestamoClientes[i].idCliente==idCliente)
+			{
+				cantidad++;
+			}
+
+		}
+	}
+
+	return cantidad;
+}
 
 void bajaPrestamoYcliente(ePrestamoCliente* pArrayPrestamoClientes,int tamArrayPrestamoClientes,int idClienteBaja)
 {

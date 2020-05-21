@@ -68,7 +68,7 @@ int main(void)
 	iniArrayPrestamos(arrayPrestamos,Q_PRESTAMOS,1);
 	iniArrayPrestamoClientes(arrayPrestamoCliente,Q_PRESTAMOS,1);
 
-	/*
+
 	////===============================================================================================================
 									//Harcodeo de arrays
 	idCliente=idCliente+hardcodearClientes(arrayClientes,Q_CLIENTES,5);
@@ -77,7 +77,7 @@ int main(void)
 
 
 	////===============================================================================================================
-	 */
+
 	do
 			{
 				system("CLS()");
@@ -280,6 +280,21 @@ int main(void)
 													break;
 												}
 
+												case 3:
+												{
+													if(cantidaDePosVaciasClientes(arrayClientes,Q_CLIENTES)==Q_CLIENTES)
+													{
+														printf("El sistema aun no posee clientes\n");
+														system("PAUSE()");
+													}
+													else
+													{
+														printf("\n\n");
+														clienteMasPrestamos(arrayClientes,Q_CLIENTES,arrayPrestamoCliente,Q_PRESTAMOS_CLIENTES);
+														system("PAUSE()");
+													}
+													break;
+												}
 
 											}
 
@@ -310,6 +325,37 @@ int main(void)
 									}
 
 								break;
+								}
+
+								case 2:
+								{
+									if(cantidaDePosVaciasPrestamos(arrayPrestamos,Q_PRESTAMOS)==Q_PRESTAMOS)
+									{
+										printf("El sistema aun no posee prestamos cargados\n");
+										system("PAUSE()");
+									}
+									else
+									{
+										prestamoPorcuota(arrayPrestamos,Q_PRESTAMOS,arrayClientes,Q_CLIENTES);
+										system("PAUSE()");
+									}
+									break;
+								}
+
+								case 3:
+								{
+									if(cantidaDePosVaciasPrestamos(arrayPrestamos,Q_PRESTAMOS)==Q_PRESTAMOS)
+									{
+										printf("El sistema aun no posee prestamos cargados\n");
+										system("PAUSE()");
+									}
+									else
+									{
+										prestamosPorCuota(arrayPrestamos,Q_PRESTAMOS);
+										system("PAUSE()");
+									}
+
+									break;
 								}
 
 							}
@@ -366,9 +412,10 @@ int subMenuInformes_clientes()
 	printf("Menu de informes Cliente\n\n");
 	printf("1-Cliente con mas prestamos activos\n");
 	printf("2-Cliente con mas prestamos saldados\n");
+	printf("3-Cliente con mes prestamos.\n");
 	printf("0-Salir\n");
 
-	if(!(utn_getNumero(&opcion,"Elija un opcion: ","Error verifique los datos ingresados quedan %d intentos\n",0,2,3)))
+	if(!(utn_getNumero(&opcion,"Elija un opcion: ","Error verifique los datos ingresados quedan %d intentos\n",0,3,3)))
 	{
 		printf("No se reconocio el ingreso, supero el maximo de posibilidades\n");
 		system("PAUSE()");
@@ -383,9 +430,11 @@ int subMenuInformes_prestamos()
 
 	printf("Menu de informes Cliente\n\n");
 	printf("1-Cantidad de prestamos de importe mayor a 1000\n");
+	printf("2-Prestamos de 12 cuotas saldados\n");
+	printf("3-Prestamos por cuotas:\n");
 	printf("0-Salir\n");
 
-	if(!(utn_getNumero(&opcion,"Elija un opcion: ","Error verifique los datos ingresados quedan %d intentos\n",0,1,3)))
+	if(!(utn_getNumero(&opcion,"Elija un opcion: ","Error verifique los datos ingresados quedan %d intentos\n",0,3,3)))
 	{
 		printf("No se reconocio el ingreso, supero el maximo de posibilidades\n");
 		system("PAUSE()");

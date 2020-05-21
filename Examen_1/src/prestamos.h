@@ -109,6 +109,15 @@ void mostrarPrestamos(ePrestamos* pArrayPrestamos,int tamArrayPrestamos,eCliente
  * return la cantidad de posiciones
  */
 int cantidaDePosVaciasPrestamos(ePrestamos* pArrayPrestamos, int tamArrayPrestamos);
+/**
+ * brief funcion utilizada para validar la posicion de un prestamo de acuerdo a la cuota ingresada
+ * param pArrayPrestamos es el array sobre el cual se va a realizar la validacion
+ * param tamArrayPrestamos es el tamaño del array recibido
+ * return la cantidad de posiciones
+ */
+
+int buscarPosPrestamoSaldado_Cuota(ePrestamos* pArrayPrestamos,int valorBuscado, int tamArrayPrestamos);
+
 
 
 #endif /* PRESTAMOS_H_ */

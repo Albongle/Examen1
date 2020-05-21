@@ -94,5 +94,8 @@ int cantidadPrestamosActivosCliente(ePrestamoCliente* pArrayPrestamoClientes,int
  */
 int cantidadPrestamosSaldadosCliente(ePrestamoCliente* pArrayPrestamoClientes,int tamArrayPrestamoClientes, int idCliente);
 
+int cantidadPrestamosCliente(ePrestamoCliente* pArrayPrestamoClientes,int tamArrayPrestamoClientes, int idCliente);
+
+
 
 #endif /* PRESTAMOCLIENTE_H_ */
