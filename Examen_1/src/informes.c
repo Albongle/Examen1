@@ -176,7 +176,6 @@ void clienteMasPrestamos(eClientes* pArrayClientes, int tamArrayClientes,ePresta
 void prestamoPorcuota(ePrestamos* pArrayPrestamos,int tamArrayPrestamos, eClientes* pArrayClientes, int tamArrayClientes)
 {
 
-	int i;
 	int cuotas;
 	int posPrestamo=-1;
 	int flag=0;
@@ -187,8 +186,7 @@ void prestamoPorcuota(ePrestamos* pArrayPrestamos,int tamArrayPrestamos, eClient
 		if(utn_getNumero(&cuotas,"ingrese la cantidad de cuotas del prestamos a buscar (solo 12 cuotas) \n","Error verifique los datos ingresados quedan %d intentos\n",12,12,3))
 		{
 			printf("ID Prestamo\tImporte\t\tCuotas\tCUIL Cliente\n");
-			for(i=0; i<tamArrayPrestamos; i++)
-			{
+
 				posPrestamo=buscarPosPrestamoSaldado_Cuota(pArrayPrestamos,cuotas,tamArrayPrestamos);
 				if(posPrestamo>=0)
 				{
@@ -196,12 +194,11 @@ void prestamoPorcuota(ePrestamos* pArrayPrestamos,int tamArrayPrestamos, eClient
 					flag=1;
 				}
 
-			}
 
 			if (flag==0)
 			{
 				system("CLS()");
-				printf("No se encontraron prestamos para el importe ingresado\n");
+				printf("No se encontraron prestamos para la cuota ingresada\n");
 
 			}
 		}
@@ -211,7 +208,7 @@ void prestamoPorcuota(ePrestamos* pArrayPrestamos,int tamArrayPrestamos, eClient
 }
 
 
-void prestamosPorCuota(ePrestamos* pArrayPrestamos,int tamArrayPrestamos)
+void QprestamosPorCuota(ePrestamos* pArrayPrestamos,int tamArrayPrestamos)
 {
 	int i;
 	int cuotas;

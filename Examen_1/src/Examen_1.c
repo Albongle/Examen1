@@ -351,7 +351,7 @@ int main(void)
 									}
 									else
 									{
-										prestamosPorCuota(arrayPrestamos,Q_PRESTAMOS);
+										QprestamosPorCuota(arrayPrestamos,Q_PRESTAMOS);
 										system("PAUSE()");
 									}
 

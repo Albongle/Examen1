@@ -59,6 +59,6 @@ void prestamoPorcuota(ePrestamos* pArrayPrestamos,int tamArrayPrestamos, eClient
  * param tamArrayPrestamos es el tamaño del array
  */
 
-void prestamosPorCuota(ePrestamos* pArrayPrestamos,int tamArrayPrestamos);
+void QprestamosPorCuota(ePrestamos* pArrayPrestamos,int tamArrayPrestamos);
 
 #endif /* INFORMES_H_ */
